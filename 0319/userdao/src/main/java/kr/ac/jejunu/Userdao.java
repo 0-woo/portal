@@ -6,9 +6,10 @@ public class Userdao {
     public User findById(Integer id) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection(
+
                 "jdbc:mysql://localhost:3306/portal",
-                "root",
-                "Woo971015!"
+                //"아이디"
+                //"비밀번호"
         );
         PreparedStatement preparedStatement = connection.prepareStatement(
                 "select*from userinfo where id = ?"
